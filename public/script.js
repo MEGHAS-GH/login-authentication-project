@@ -36,7 +36,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
   const username = document.getElementById("registerUsername").value;
   const password = document.getElementById("registerPassword").value;
 
-  const response = await fetch("/register", {
+  const response = await fetch("https://meg-login-authentication-project.onrender.com/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password })
@@ -70,7 +70,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   const username = document.getElementById("loginUsername").value;
   const password = document.getElementById("loginPassword").value;
 
-  const response = await fetch("https://meg-login-authentication-project.onrender.com", {
+  const response = await fetch("https://meg-login-authentication-project.onrender.com/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password })
