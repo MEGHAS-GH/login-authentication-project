@@ -116,6 +116,10 @@ app.post("/login", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
+//api response
+app.get("/", (req, res) => {
+  res.send("Login Authentication Backend is Running 🚀");
+});
 
 // Start Server
 const PORT = process.env.PORT || 5000;
@@ -123,4 +127,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
-
